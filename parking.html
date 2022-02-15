@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Route</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="js/jquery-1.11.3.min.js"></script> 
+    <script src="js/parking.js"></script>
+  </head>
+  <link rel="stylesheet" href="css/common.css">
+  <body>
+
+    <nav>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop"/>
+
+          <ul class="menu">
+            <li><a href="parking.html">Parking</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="route.html">Route</a></li>
+          </ul>
+          <!--<input type="text" class="search" placeholder="Search a place"></input>-->
+          <input type="text" class="search" name="place" list="placename">
+            <datalist id="placename">  <!--dropdown menu-->
+              <option value="Capricornia">  
+            </datalist>
+          <button class="search_button">Search</button>
+    </nav>
+
+    <div class="left">
+          <h2>Parking</h2>
+          <div class="item"> 
+            <div class="info">
+              <div class="crime">Parking1</div>
+              <span class="number" id="assault_number"></span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="info">
+              <div class="crime">Parking2</div>
+              <span class="number" id="robbery_number"></span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="info">
+              <div class="crime">Parking3</div>
+              <span class="number" id="sexual_number"></span>
+            </div>
+          </div>
+    </div>
+
+    </div>
+    <div id="map"></div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGi-S_snda8R9BcIXaDmjckZXad9JJ0Ds&callback=initMap&libraries=&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>

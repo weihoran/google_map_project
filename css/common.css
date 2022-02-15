@@ -1,0 +1,310 @@
+
+/* 
+
+inspiration comes from https://www.w3schools.com/howto/howto_css_modal_images.asp
+
+*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+html{
+  height: 100%;
+}
+
+body {
+  font-size:22px;
+  line-height: 32px;
+  margin: 0;
+  padding: 0;
+  word-wrap:break-word !important;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  /*background-image:url("img/navigation_background.jpeg");
+  background-size:100%;*/
+  }
+
+a {
+  color: #FFF;
+}
+
+#map {
+  height: 100%;
+  width: 70%;
+}
+
+
+.search{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1em;
+  padding-left: 10px;
+  margin-top:5px;
+  margin-left: 50px;
+
+}
+
+.search_button{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #8fd64e;
+  color: #fff;
+
+}
+
+.left{
+  width: 30%;
+  float:left;
+}
+.left .item{
+  height: 200px;
+  margin-top:1px;
+  background-color: #d6f0f3;
+  border: solid 1px;
+}
+
+.left .info{
+  margin-top: 10px;
+
+}
+
+
+h1 {
+  margin-top: 100px;
+  text-align:center;
+  font-size:60px;
+  line-height: 70px;
+  font-family: 'Bree Serif', 'serif';
+  }
+
+  h2{
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 890px;
+}
+
+p {
+  text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+
+nav { 
+  margin:0;
+  padding: 0;
+  background-color: #000;
+  margin-bottom: 10px;
+}
+
+
+
+nav:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+
+nav ul {
+  float: left;
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  }
+  
+nav ul li {
+  margin: 0px;
+  display:inline-block;
+  float: left;
+  background-color: #000;
+  padding-right: 50px;
+  padding-left: 50px;
+  }
+
+
+nav a {
+  display:block;
+  padding:14px 20px;  
+  color:#FFF;
+  font-size:27px;
+  text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+nav a:hover { 
+  background-color: #000000; 
+}
+
+
+nav ul ul {
+  display: none;
+  position: absolute; 
+  top: 60px; 
+}
+  
+
+nav ul li:hover > ul {
+  display:inherit;
+}
+  
+
+nav ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+
+
+nav ul ul ul li {
+  position: relative;
+  top:-60px;
+  left:170px; 
+}
+
+
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+@media only screen and (max-width : 768px) {
+  .modal-content {
+    width: 100%;
+  }
+
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+
+
+
+  .toggle {
+    display: block;
+    background-color: #000;
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px;
+    text-decoration:none;
+    border:none;
+  }
+
+  .toggle:hover {
+    background-color: #000000;
+  }
+
+  [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+    }
+
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: #000000;
+  }
+  
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a{
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px; 
+  }
+  
+  
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #212121; 
+  }
+
+
+  nav ul ul {
+    float: none;
+    position:static;
+    color: #ffffff;
+  }
+    
+
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+    display: none;
+  }
+    
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+   
+  }
+  .singlerow img{
+    width: 100%;
+  }
+  .singlerow p{
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width : 330px) {
+
+  nav ul li {
+    display:block;
+    width: 94%;
+  }
+
+}

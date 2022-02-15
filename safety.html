@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Safety Level</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="js/jquery-1.11.3.min.js"></script> 
+    <script src="js/safety.js"></script>
+    <title>Home</title>
+  </head>
+  <link rel="stylesheet" href="css/common.css">
+  <body>
+
+    <nav>
+          <label for="drop" class="toggle">Menu</label>
+          <input type="checkbox" id="drop"/>
+
+          <ul class="menu">
+            <li><a href="parking.html">Parking</a></li>
+            <li><a href="safety.html">Safety</a></li>
+            <li><a href="route.html">Route</a></li>
+          </ul>
+          <!--<input type="text" class="search" placeholder="Search a place"></input>-->
+          <input type="text" class="search" name="place" list="placename">
+            <datalist id="placename">
+              <option value="Capricornia">
+              <option value="Darling Downs">
+              <option value="Far North">
+              <option value="Gold Coast">
+              <option value="Ipswich">
+              <option value="Logan">
+              <option value="Mackay">
+              <option value="Moreton">
+              <option value="Mount Isa">
+              <option value="North Brisbane">
+              <option value="South Brisbane">
+              <option value="South West">
+              <option value="Sunshine Coast">
+              <option value="Townsvillet">
+              <option value="Wide Bay Burnett">
+            </datalist>
+          <button class="search_button">Search</button>
+    </nav>
+
+    <div class="left">
+          <h2>Safety Level</h2>
+          <div class="item"> 
+            <div class="info">
+              <div class="crime">Assault</div>
+              <span class="number" id="assault_number"></span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="info">
+              <div class="crime">Robbery</div>
+              <span class="number" id="robbery_number"></span>
+            </div>
+          </div>
+          <div class="item">
+            <div class="info">
+              <div class="crime">Sexual Offences</div>
+              <span class="number" id="sexual_number"></span>
+            </div>
+          </div>
+    </div>
+
+    </div>
+    <div id="map"></div>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGi-S_snda8R9BcIXaDmjckZXad9JJ0Ds&callback=initMap&libraries=&v=weekly&channel=2"
+      async
+    ></script>
+  </body>
+</html>

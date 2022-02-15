@@ -1,0 +1,51 @@
+
+body{
+  color: white;
+}
+
+.image-background{
+  height: 100vh;
+  min-height: 500px;
+  background-color: #9e9b9b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.title{
+  font-weight: 400;
+  text-shadow:1px 2px black;
+}
+
+.main-container{
+  text-align: center;
+}
+.title-container{
+  padding-top: 25vh;
+}
+
+.description-container{
+  width:70vh;
+  margin: 0 auto
+}
+.description{
+  text-align: center;
+}
+.explore-button{
+    display: block;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #C66666;
+    border-color: #C66666;
+    cursor: pointer;
+    text-decoration: none;
+    color: #e0ecec;
+
+
+
+
+}
